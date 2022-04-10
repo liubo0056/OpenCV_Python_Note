@@ -13,9 +13,9 @@ GRAY = cv2.cvtColor(img,cv2.COLOR_BGR2GRAY) # 把彩色图片变成灰阶
 blur = cv2.GaussianBlur(img,(15,15),10)
 # 3)取边缘
 canny = cv2.Canny(img,150,200)
-# 4) 边缘膨胀
+# 4) 膨胀
 dileate = cv2.dilate(canny,kernel,iterations=1 )
-# 5) 线条变细
+# 5) 侵蚀(线条变细)
 erode  = cv2.erode(dileate,kernel1,iterations=1 )
 
 # cv2.imshow("img", img)
